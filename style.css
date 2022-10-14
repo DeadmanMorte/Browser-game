@@ -1,0 +1,57 @@
+/* screen will start of light and relaxed, refer to color contrast apps,
+will at some point inverse 
+contrast and be mostly dark. to coorespond with thematic shift. */
+
+nav li {
+    list-style: none;
+    display:inline;
+    text-align:center;
+    font-size: larger;
+    font-weight: bolder;
+    margin: 0 100px 0 100px
+}
+
+.mainScreen {
+    border-radius: 5%;
+    border: 1px solid white;
+    padding: 1em;
+}
+.sprite {
+    display:flex;
+}
+.score {
+    display:flex;
+    align-items: right;
+    justify-content: flex-end;
+}
+
+.prompts {
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    animation:fadeIn 2s;
+
+}
+.responseBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul {
+    text-align: center;
+}
+body {
+    background-color:#8EDCE6;
+    
+}
+
+container {
+    display:flex;
+    border:1px solid red;
+}
+
+@keyframes fadeIn {
+    0% { opacity:0;}
+    100% {opacity:1;}
+}
