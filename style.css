@@ -16,6 +16,7 @@ nav li {
     border: 1px solid white;
     padding: 1em;
     min-height: 500px;
+    background-color: #bddfe4;
 }
 .sprite {
     display:flex;
