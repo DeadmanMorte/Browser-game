@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
             <li class="Runaway">Save and Quit</li> 
             <!-- prompts something bout "you cant just 'save' then leave. Will you abandon your progress?" -->
             <li class="surrender">Forfeit</li> 
-            <!-- prompts a taunting and mildly depressing farewell -->
+            <!-- prompts a taunting and mildly depressing farewell -->                                                              
         </ul>
     </nav>
 
@@ -29,32 +29,29 @@
             <div class="score">
                 <h2>(SCORE)</h2>
             <!-- TODO: icon tally for score(upper right), -->
-            </div>
+            </div>                                        
         </container>
 
         <div class="prompts">
             <!-- Screen for game -->
-            <h3> What is 1 + 4?</h3>
+            <h3> What is 1 + 4?</h3>                               
        <!-- (tentative: at some point animate sprite in attempting to escape boundary of screen?) -->
         </div>
 
         <div class="responseBtns">
-            <button type="button">5</button>
-            <button type="button">14</button>
+            <button type="button" class="btn1" value="'0" onclick="buttonClicked(0);">5</button>
+            <button type="button" class="btn2" value="'1" onclick="buttonClicked(1);">14</button>
         </div>
 
     </div>
 
-
     <hr>
-<audio autoplay="autoplay" loop="true">
-    <source src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771181336&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+<audio autoplay="autoplay" loop="true" controls="controls">
+    <source src="/Miniatures_(getmp3.pro).mp3" alt='Minatures by Yan Vosley' >
 </audio>
-<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771181336&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/yanvolsy" title="Yan Volsy" target="_blank" style="color: #cccccc; text-decoration: none;">Yan Volsy</a> · <a href="https://soundcloud.com/yanvolsy/miniatures" title="Miniatures" target="_blank" style="color: #cccccc; text-decoration: none;">Miniatures</a></div>
-<iframe width="560" height="10" src="https://www.youtube.com/embed/vYvAjMSLf58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autostart="true" loop="true">THe Uncanny Valley-fromCriminalMinds.</iframe>
 <br>
-<audio>back end track, "The Inside Waltz- Bo Burnham" OR "Comptine D'un Autre ete Lapres-midi"</audio>
+<!-- <audio>back end track, "The Inside Waltz- Bo Burnham" OR "Comptine D'un Autre ete Lapres-midi"</audio> -->
 </body>
 
 <script src="script.js"></script>
-</html>
+</html> 

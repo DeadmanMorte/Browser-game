@@ -10,24 +10,39 @@
 
 let element
 const score = 0 
+var buttonsClicked = [false, false]
+
+ function buttonClicked(button){
+    buttonsClicked[button] = true;
+    question1()
+}
 
 function Reset(){
-    let reset = document.nav.ul.getElementsByClassName('reset')
-    reset.addEventListener('click', function(){
+    element = document.getElementsByClassName("reset");
+    element[0].addEventListener('click', function(){
         window.location.reload();
     })
 }
 
+
+function question1(){
+    if(buttonsClicked[0] == true){
+        document.getElementsByClassName("btn1")[0].style.backgroundColor = 'green'
+        
+    } else if (buttonsClicked[1] == true){
+        document.getElementsByClassName("btn2")[0].style.backgroundColor = 'red'
+    }
+}
+
 // function runaway(){
-//     let reset= document.nav.ul.li.getElementsByClassName('Runaway')
-//     reset.addEventListener('click', function(){
-//       let element = document.body.createElement('h1')
-//       element.body.innerHTML.append('You cant just save and quit from reality. you cant pause this. Time does not care for your schedule or desires at all. Nor do I.')
-//       .then
-//       window.prompt('Will you run away?')
-//         if yes then window.location.reload()/ or crash the site
+//     element = document.getElementsByClassName('Runaway');
+//     element[0].addEventListener('click', function(){
+//       let run = document.createElement('h1');
+//         run[0].innerHTML = 'You cant just save and quit from reality. You do not get to pause this. Time does not care for your schedule or desires at all. Nor do I.'
+//             document.body.container.append(run)
 //     })
 // }
+// runaway()
 
 // function Forfeit(){
 //     let reset= document.nav.ul.li.getElementsByClassName('surrender')
@@ -53,9 +68,7 @@ function Reset(){
 //     element.innerHTML.append(question[]++)
 // }
 
-
-
-// question list (array?)
+// questions = [
 // waht is the capital of Burkina Faso? (Ouagadougou)
 // who is the first person to win two Nobel Prizes? (Marie Curie)
 // What country did the United States invade following the September 11th attacks? (Afghanistan)
@@ -73,4 +86,7 @@ function Reset(){
 // Is your life worth it? What of those that you know suffer greater? 
 // Isnt it easy to rationalize excuses?
 // Are you a good being? 
-// Of course you think so. 
+// Of course you think so. ]
+
+Reset()
+question1()
