@@ -39,7 +39,6 @@ nav li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
 }
 nav ul {
     text-align: center;
