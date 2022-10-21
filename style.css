@@ -25,6 +25,8 @@ nav li {
     display:flex;
     align-items: right;
     justify-content: flex-end;
+    font-weight: bolder;
+    font-size: x-large;
 }
 
 .prompts {

@@ -10,41 +10,42 @@
 var correctBtn
 let element
 var i = 0
-const score = 0 
+var score = 0 
 var buttonsClicked = [false, false, false, false]
-var question = questions[i]
+var question = questions[i];
 
  function buttonClicked(button){
     buttonsClicked[button] = true;
-    validateQuestion(button)
+    validateQuestion(button);
+    newQuestion();
 }
 
 
 function validateQuestion(button){
     if(buttonsClicked[button] == true && button == correctBtn){
-        document.getElementsByClassName('responseBtns')[0].style.backgroundColor = 'green'
-        console.log('booty')
-    } else 
-        document.getElementsByClassName('responseBtns')[0].style.backgroundColor = 'red'
-        console.log('titty')
-    // newQuestion()
+        document.getElementsByClassName('responseBtns')[0].style.backgroundColor = 'green';
+        updateScore(button);
+    } else {
+        document.getElementsByClassName('responseBtns')[0].style.backgroundColor = 'red';
+}
+i++;
 }
 
-// function updateScore(){
-//     if button pressed = correct
-//     document.body.button.style.backgroundColor = 'green'
-//     score = score + 1
-//     let scoreBoard = document.body.getElementsByClassName('score')
-//     scoreBoard.innerHTML.append(score)
-    
-//     return score
-// }
+function updateScore(button){
+    let scoreBoard = document.getElementsByTagName('h2')[0];
+        score = score + 1;
+            scoreBoard.innerHTML = score;
+    return score;
+}
+
+
 
 function newQuestion(){
+    question = questions[i];
     document.getElementsByTagName('h3')[0].textContent = question.text;
     getRandomButton();
-    return correctBtn
-    i++;
+    return correctBtn;
+    return question;
 }
 
  function getRandomButton() {
@@ -107,15 +108,17 @@ function Forfeit(){
             document.getElementsByClassName('btn1')[0].innerHTML = 'Yes';
                 document.getElementsByClassName('btn2')[0].innerHTML = 'No';
                     document.getElementsByClassName('btn3')[0].innerHTML = "heck no";
-                        document.getElementsByClassName('btn4')[0].innerHTML = "mama aint raise no punk"
+                        document.getElementsByClassName('btn4')[0].innerHTML = "mama aint raise no punk";
     })
+    
 }
-
+// TODO: add forfeit choice functionality
 function forfeitChoice(){
     if(buttonsClicked[0] == true){
-        document.getElementsByClassName("btn1")[0].style.backgroundColor = 'red';
-        // perhaps crash the site?
-    } if( buttonsClicked[1,2,3] == true){
+        document.getElementsByClassName("responseBtns")[0].style.backgroundColor = 'red';
+        window.location.replace('https://www.youtube.com/watch?v=J7GY1Xg6X20');
+    } if (buttonsClicked[1] == true || buttonsClicked[2] == true || buttonsClicked[3] == true) {   
+        document.getElementsByClassName("responseBtns")[0].style.backgroundColor = 'green';
         window.alert('nice');
         window.alert('I know it can get hard, but the struggle to be is noble. You are noble. Never doubt that, so long as you try.');
         newQuestion()
