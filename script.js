@@ -7,6 +7,7 @@
 // }
 // document.body.querySelector('h2')
 
+var forfeiture = false
 var correctBtn
 let element
 var i = 0
@@ -18,6 +19,8 @@ var question = questions[i];
     buttonsClicked[button] = true;
     validateQuestion(button);
     newQuestion();
+    forfeitureCheck();
+    toneShift();
 }
 
 
@@ -29,6 +32,8 @@ function validateQuestion(button){
         document.getElementsByClassName('responseBtns')[0].style.backgroundColor = 'red';
 }
 i++;
+button = false;
+return button;
 }
 
 function updateScore(button){
@@ -37,8 +42,6 @@ function updateScore(button){
             scoreBoard.innerHTML = score;
     return score;
 }
-
-
 
 function newQuestion(){
     question = questions[i];
@@ -101,7 +104,7 @@ function runaway(){
     })
 }
 
-function Forfeit(){
+ function Forfeit(){
     element = document.getElementsByClassName('surrender');
     element[0].addEventListener('click', function(){
         document.getElementsByTagName('h3')[0].textContent = 'I do not blame you. The burdens of existence are often too much to bear. If this is your true and honest choice I will not patronize you. Are you certain you would like to end it all?';
@@ -109,22 +112,47 @@ function Forfeit(){
                 document.getElementsByClassName('btn2')[0].innerHTML = 'No';
                     document.getElementsByClassName('btn3')[0].innerHTML = "heck no";
                         document.getElementsByClassName('btn4')[0].innerHTML = "mama aint raise no punk";
+                                forfeiture = true;
     })
-    
+    return forfeiture
 }
-// TODO: add forfeit choice functionality
-function forfeitChoice(){
-    if(buttonsClicked[0] == true){
-        document.getElementsByClassName("responseBtns")[0].style.backgroundColor = 'red';
-        window.location.replace('https://www.youtube.com/watch?v=J7GY1Xg6X20');
-    } if (buttonsClicked[1] == true || buttonsClicked[2] == true || buttonsClicked[3] == true) {   
-        document.getElementsByClassName("responseBtns")[0].style.backgroundColor = 'green';
-        window.alert('nice');
-        window.alert('I know it can get hard, but the struggle to be is noble. You are noble. Never doubt that, so long as you try.');
-        newQuestion()
+
+function forfeitureCheck(){
+    if (forfeiture != false){
+        forfeitChoice()
     }
 }
+
+// TODO: add forfeit choice functionality
+function forfeitChoice(){
+        if(buttonsClicked[0] == true){
+            document.getElementsByClassName("responseBtns")[0].style.backgroundColor = 'red';
+            window.location.replace('https://www.youtube.com/watch?v=J7GY1Xg6X20');
+        } else if (buttonsClicked[1] == true || buttonsClicked[2] == true || buttonsClicked[3] == true) {   
+            document.getElementsByClassName("responseBtns")[0].style.backgroundColor = 'green';
+            window.alert('nice');
+            window.alert('I know it can get hard, but the struggle to be is noble. You are noble. Never doubt that, so long as you try.');
+            newQuestion()
+        }
+        forfeiture = false;
+        return forfeiture;
+    }
+
+ function toneShift(){
+    if (i >= 9) {
+        document.body.style.backgroundColor = 'black';
+        document.getElementsByClassName('mainScreen')[0].style.backgroundColor = '#696f70';
+            document.body.style.color = 'white';
+                    document.getElementsByClassName('btn1')[0].style.backgroundColor = 'white';
+                        document.getElementsByClassName('btn2')[0].style.backgroundColor = 'white';
+                            document.getElementsByClassName('btn3')[0].style.backgroundColor = "white";
+                                document.getElementsByClassName('btn4')[0].style.backgroundColor = "white";
+                           
+    }
+ }
+
 newQuestion()
 Reset()
 runaway()
 Forfeit()
+console.log(forfeiture)

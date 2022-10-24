@@ -47,9 +47,32 @@ nav ul {
 }
 body {
     background-color:#8EDCE6;
-    
 }
 
+.btn1 {
+    background-color: rgb(52, 228, 169);
+    padding: 15px 32px;
+    border-radius: 75%;
+    font-size: 15px;
+}
+.btn2 {
+    background-color: rgb(52, 228, 169);
+    padding: 15px 32px;
+    border-radius: 75%;
+    font-size: 15px;
+}
+.btn3 {
+    background-color: rgb(52, 228, 169);
+    padding: 15px 32px;
+    border-radius: 75%;
+    font-size: 15px;
+}
+.btn4 {
+    background-color: rgb(52, 228, 169);
+    padding: 15px 32px;
+    border-radius: 75%;
+    font-size: 15px;
+}
 container {
     display:flex;
     justify-content: space-between;
