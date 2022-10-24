@@ -44,6 +44,7 @@ function newQuestion(){
 }
 
  function getRandomButton() {
+    //learned from MDN documentation
   let num = Math.floor(Math.random() * 4);
   switch(num) {
     case 0:
@@ -84,6 +85,7 @@ function newQuestion(){
  function Reset(){
     element = document.getElementsByClassName("reset");
     element[0].addEventListener('click', function(){
+        //learned from MDN documentation
         window.location.reload();
     })
 }
@@ -115,10 +117,10 @@ function forfeitureCheck(){
     }
 }
 
-
 function forfeitChoice(){
         if(buttonsClicked[0] == true){
             document.getElementsByClassName("responseBtns")[0].style.backgroundColor = 'red';
+            //learned from MDN documentation
             window.location.replace('https://www.youtube.com/watch?v=J7GY1Xg6X20');
         } else if (buttonsClicked[1] == true || buttonsClicked[2] == true || buttonsClicked[3] == true) {   
             document.getElementsByClassName("responseBtns")[0].style.backgroundColor = 'green';
