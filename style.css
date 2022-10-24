@@ -26,7 +26,8 @@ nav li {
     align-items: right;
     justify-content: flex-end;
     font-weight: bolder;
-    font-size: x-large;
+    padding-right: 40px;
+    font-size: 30px;
 }
 
 .prompts {
@@ -50,24 +51,28 @@ body {
 }
 
 .btn1 {
+    display: flex;
     background-color: rgb(52, 228, 169);
     padding: 15px 32px;
     border-radius: 75%;
     font-size: 15px;
 }
 .btn2 {
+    display: flex;
     background-color: rgb(52, 228, 169);
     padding: 15px 32px;
     border-radius: 75%;
     font-size: 15px;
 }
 .btn3 {
+    display: flex;
     background-color: rgb(52, 228, 169);
     padding: 15px 32px;
     border-radius: 75%;
     font-size: 15px;
 }
 .btn4 {
+    display: flex;
     background-color: rgb(52, 228, 169);
     padding: 15px 32px;
     border-radius: 75%;

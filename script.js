@@ -1,11 +1,3 @@
-// window.alert('Hello')
-// window.alert("Let us play a game!")
-// window.alert("wait that sounds creepy, not on some Saw shit this is just a simple trivia game project. nothing bad will happen I promise.")
-// let consent = window.prompt("If you win, there is a sizable cash prize. Wanna play?"
-// if(consent != 'yes' && "Yes" && "YES") {
-//     window.alert("bummer...:(")
-// }
-// document.body.querySelector('h2')
 
 var forfeiture = false
 var correctBtn
@@ -123,7 +115,7 @@ function forfeitureCheck(){
     }
 }
 
-// TODO: add forfeit choice functionality
+
 function forfeitChoice(){
         if(buttonsClicked[0] == true){
             document.getElementsByClassName("responseBtns")[0].style.backgroundColor = 'red';
@@ -151,8 +143,20 @@ function forfeitChoice(){
     }
  }
 
+ function ending(){
+    if(i > questions.length){
+        window.alert('Was it fun for you?');
+        window.alert('As is often partronizingly said, Ignorance is bliss.');
+        window.location.reload;
+        // document.getElementsByTagName('h3')[0].textContent = 'Was it fun for you?';
+        //     document.getElementsByClassName('btn1')[0].innerHTML = 'Ignorance';
+        //         document.getElementsByClassName('btn2')[0].innerHTML = 'Is';
+        //             document.getElementsByClassName('btn3')[0].innerHTML = "Bliss";
+        //                 document.getElementsByClassName('btn4')[0].innerHTML = "</3";
+    }
+ }
+
 newQuestion()
 Reset()
 runaway()
 Forfeit()
-console.log(forfeiture)
