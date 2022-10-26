@@ -29,6 +29,7 @@ nav li {
     font-weight: bolder;
     padding-right: 40px;
     font-size: 30px;
+    animation:fadeIn 4s;
 }
 
 .prompts {
@@ -37,6 +38,7 @@ nav li {
     align-items: center;
     justify-content: center;
     animation:fadeIn 3s;
+    font-size: 20px;
 
 }
 .responseBtns {
