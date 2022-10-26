@@ -86,6 +86,9 @@ container {
     justify-content: space-between;
 }
 
+audio {
+    color: aquamarine;
+}
 @keyframes fadeIn {
     0% { opacity:0;}
     100% {opacity:1;}
