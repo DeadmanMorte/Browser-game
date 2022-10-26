@@ -7,7 +7,7 @@ var score = 0
 var buttonsClicked = [false, false, false, false]
 var question = questions[i];
 
- function buttonClicked(button){
+function buttonClicked(button){
     buttonsClicked[button] = true;
     validateQuestion(button);
     newQuestion();
@@ -22,10 +22,11 @@ function validateQuestion(button){
         updateScore(button);
     } else {
         document.getElementsByClassName('responseBtns')[0].style.backgroundColor = 'red';
-}
+        toneShiftedScore();
+    }
 i++;
 button = false;
-return button;
+    return button;
 }
 
 function updateScore(button){
@@ -43,7 +44,7 @@ function newQuestion(){
     return question;
 }
 
- function getRandomButton() {
+function getRandomButton() {
     //learned from MDN documentation
   let num = Math.floor(Math.random() * 4);
   switch(num) {
@@ -80,9 +81,9 @@ function newQuestion(){
                             correctBtn = 3;
   }
   return correctBtn
- }
+}
 
- function Reset(){
+function Reset(){
     element = document.getElementsByClassName("reset");
     element[0].addEventListener('click', function(){
         //learned from MDN documentation
@@ -98,7 +99,7 @@ function runaway(){
     })
 }
 
- function Forfeit(){
+function Forfeit(){
     element = document.getElementsByClassName('surrender');
     element[0].addEventListener('click', function(){
         document.getElementsByTagName('h3')[0].textContent = 'I do not blame you. The burdens of existence are often too much to bear. If this is your true and honest choice I will not patronize you. Are you certain you would like to end it all?';
@@ -132,8 +133,8 @@ function forfeitChoice(){
         return forfeiture;
     }
 
- function toneShift(){
-    if (i >= 9) {
+function toneShift(){
+    if (i >= 13) {
         document.body.style.backgroundColor = 'black';
         document.getElementsByClassName('mainScreen')[0].style.backgroundColor = '#696f70';
             document.body.style.color = 'white';
@@ -141,24 +142,20 @@ function forfeitChoice(){
                         document.getElementsByClassName('btn2')[0].style.backgroundColor = 'white';
                             document.getElementsByClassName('btn3')[0].style.backgroundColor = "white";
                                 document.getElementsByClassName('btn4')[0].style.backgroundColor = "white";
-                           
+                                    document.getElementsByClassName('spritey')[0].remove();                     
     }
  }
-
- function ending(){
-    if(i > questions.length){
-        window.alert('Was it fun for you?');
-        window.alert('As is often partronizingly said, Ignorance is bliss.');
-        window.location.reload;
-        // document.getElementsByTagName('h3')[0].textContent = 'Was it fun for you?';
-        //     document.getElementsByClassName('btn1')[0].innerHTML = 'Ignorance';
-        //         document.getElementsByClassName('btn2')[0].innerHTML = 'Is';
-        //             document.getElementsByClassName('btn3')[0].innerHTML = "Bliss";
-        //                 document.getElementsByClassName('btn4')[0].innerHTML = "</3";
+function toneShiftedScore(){
+    if (i >= 13){
+        let scoreBoard = document.getElementsByTagName('h2')[0];
+        score = score - 1;
+            scoreBoard.innerHTML = score;
     }
- }
+    return score;
+}
 
 newQuestion()
 Reset()
 runaway()
 Forfeit()
+

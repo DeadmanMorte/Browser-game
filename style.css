@@ -20,6 +20,7 @@ nav li {
 }
 .sprite {
     display:flex;
+    animation:fadeIn 4s;
 }
 .score {
     display:flex;

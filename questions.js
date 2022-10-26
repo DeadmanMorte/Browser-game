@@ -40,11 +40,25 @@ const questions = [
     op3: 'George Graham',
 },
 
+{ text: 'What player currently holds the NBA record for most points scored?',
+    answer: 'Kareem Abdul Jabbar',
+    op1: 'Michael Jordan',
+    op2: 'Wilt Chamberlain',
+    op3: 'Mo Cheeks',
+},
+
 { text: "What is the Spanish word 'Puto' mean?",
     answer: 'Male Prostitute',
     op1: 'Female Dog',
     op2: 'Homosexual',
     op3: 'No mames guey',
+},
+
+{ text:'Who originally wrote the song "Strange Fruit" as a visceral response to lynchings in the late 1930s?',
+    answer:'Adel Meeropol',
+    op1:'Billie Holiday',
+    op2: "Nina Simone",
+    op3: 'Donda West',
 },
 
 { text: 'Are you a good person?',
@@ -59,6 +73,27 @@ const questions = [
     op1: 'Lebanon',
     op2: 'Vena Cava',
     op3: 'Mitochondria, the powerhouse of the cell',
+},
+
+{ text:"Which famous comedian sang 'Friend Like Me' in Disney's 1992 film 'Aladdin'?",
+    answer:'Robin Williams',
+    op1:'Eddie Murphy',
+    op2: "Richard Pryor",
+    op3: 'Rita Rudner',
+},
+
+{ text: 'What country openly and currently denies its war crimes from the second World War?',
+    answer: 'Japan',
+    op1: "The United States",
+    op2: 'Germany',
+    op3: 'India',
+},
+
+{ text:'Is climate change real?',
+    answer:'Yes',
+    op1: 'No',
+    op2:"Fake news it's part of the liberal agenda to-",
+    op3:'I freaking hope not',
 },
 
 { text: 'Is it better to live as a kind and rightous slave to wretched men, or a cruel and callous deviant against those same men?',
@@ -89,6 +124,13 @@ const questions = [
     op3: '   ',
 },
 
+{ text: 'How many civilians did the Marines of the 3rd Battalion kill in the 2005 Haditha massacre?',
+    answer:'24',
+    op1: '11',
+    op2: '55',
+    op3: 'It did not occur',
+},
+
 { text:'Is one responsible for the sins of those they support?',
     answer:'   ',
     op1: 'Yes',
@@ -97,10 +139,10 @@ const questions = [
 },
 
 { text: 'How did Socrates die',
-answer: 'Executed for impiety',
-op1: 'Executed by democracy',
-op2: 'Suicide',
-op3: 'Killed as a casualty of the Peloponnesian War',
+    answer: 'Executed for impiety',
+    op1: 'Executed by democracy',
+    op2: 'Suicide',
+    op3: 'Killed as a casualty of the Peloponnesian War',
 },
 
 { text: 'What is the patron deity of the United States?',
@@ -152,6 +194,5 @@ op3: 'Killed as a casualty of the Peloponnesian War',
 },
 
 {  text: "What should I do? What must be done? What is 'good'?",
-
 },
 ]
