@@ -1,6 +1,5 @@
-/* screen will start of light and relaxed, refer to color contrast apps,
-will at some point inverse 
-contrast and be mostly dark. to coorespond with thematic shift. */
+@import "btnConfig";
+@import "config";
 
 nav li {
     list-style: none;
@@ -38,8 +37,7 @@ nav li {
     align-items: center;
     justify-content: center;
     animation:fadeIn 3s;
-    font-size: 20px;
-
+    font-size: 15px;
 }
 .responseBtns {
     display: flex;
@@ -86,9 +84,6 @@ container {
     justify-content: space-between;
 }
 
-audio {
-    color: aquamarine;
-}
 @keyframes fadeIn {
     0% { opacity:0;}
     100% {opacity:1;}

@@ -41,10 +41,10 @@ const questions = [
 },
 
 { text: 'What player currently holds the NBA record for most points scored?',
-    answer: 'Kareem Abdul Jabbar',
+    answer: "Lebron James" ,
     op1: 'Michael Jordan',
     op2: 'Wilt Chamberlain',
-    op3: 'Mo Cheeks',
+    op3: 'Kareem Abdul Jabbar',
 },
 
 { text: "What is the Spanish word 'Puto' mean?",
@@ -175,7 +175,7 @@ const questions = [
 
 { text: 'Do human beings deserve to exist?',
     answer: 'Maybe; what is it that designates deserved existence?',
-    op1:'No, for we are the only species who arre willfully ignorant and actively cruel',
+    op1:'No, for we are the only species who are willfully ignorant and actively cruel',
     op2:"Yes, for we are in God's likeness and are able to do utopic awesome things",
     op3:'I hope so',
 },
@@ -195,4 +195,100 @@ const questions = [
 
 {  text: "What should I do? What must be done? What is 'good'?",
 },
+]
+
+
+
+
+
+
+
+
+
+const trivia = [
+
+{ text: 'What is the late author of Japanese manga "Berserk"?',
+    answer:'Kentaro Miura',
+    op1: 'Ling Ling Ding Ding',
+    op2: 'Jerry Springer',
+    op3: 'Masashi Kishimoto',
+},
+
+{ text: 'What North Korean dish is often served with ice in it?',
+    answer:'Mul Naengmyeon',
+    op1: 'Bangtan shekidul',
+    op2: 'Mul Kimchi',
+    op3: 'Chicharonnes',
+},
+
+{ text: 'Who was the inventor of the latex condom?',
+    answer:'Charles Goodyear',
+    op1: 'Doug Dimmadome',
+    op2: 'Kellerel Uburodem',
+    op3: 'James Dyson',
+},
+
+{ text: "What was Mozart's full name?",
+    answer:'Wolfgang Amadeus Mozart',
+    op1: 'Johannes Den Mozart II',
+    op2: 'Heinrich Von Mozart Beethoven',
+    op3: 'Jarrers Wolfgang Mozart',
+},
+
+{ text: 'What generation of Spartan is the Master Chief from the "Halo" video game series?',
+    answer:'Generation II',
+    op1: 'Generation I',
+    op2: 'Generation III',
+    op3: 'He was an Orion',
+},
+
+{ text: 'Of the following individuals, who taught themselves how to read?',
+    answer:'Frederick Douglass',
+    op1: 'Thomas Jefferson',
+    op2: 'Benjamin Franklin',
+    op3: 'Salvador Dali',
+},
+
+{ text: 'What North Korean dish is often served with ice in it?',
+    answer:'Mul Naengmyeon',
+    op1: 'Bangtan shekidul',
+    op2: 'Mul Kimchi',
+    op3: 'Chicharonnes',
+},
+
+{ text: 'How many states are there in India?',
+    answer:'28',
+    op1: '106',
+    op2: '8',
+    op3: '15',
+},
+
+{ text: 'What element on the periodic table has atomic number 69?',
+    answer:'Thulium',
+    op1: 'Condominium',
+    op2: 'Palladium',
+    op3: 'Niceium',
+},
+
+{ text: 'Did you use Google for any of this trivia?',
+    answer:'Yes',
+    op1: "No but I'm lying",
+    op2: 'Actually No',
+    op3: '......no',
+},
+
+{ text: 'Is it gay to kiss the homies goodnight?',
+    answer:'Maybe, if you are gay',
+    op1: "I don't know",
+    op2: 'Yes. I am insecure',
+    op3: 'No, notions of homosexuality are assigned to certain behaviors arbitrarily',
+},
+
+{ text: 'How many major titles does Serena Williams have?',
+    answer:'39',
+    op1: '38',
+    op2: '40',
+    op3: '44',
+},
+ 
 ]
