@@ -1,14 +1,17 @@
-@import "config";
+@import "config"; 
 
-%btn {
-    display: flex;
-    background-color: rgb(52, 228, 169);
-    padding: 15px 32px;
-    border-radius: 75%;
-    font-size: 15px;
-    
-  
-    &:hover {
-      transform: scale(.80);
+$btn-nums: 1, 2, 3, 4;
+
+@each $btn-num in $btn-nums{
+    .btn-#{$btn-num} {
+        display: $flex-display;
+        background-color: $btn-color;
+        padding: $btn-padding;
+        border-radius: $btn-radius;
+        font-size: $btn-font-size;
+            &:hover{
+                background-color: $hover-color ;
+                transform: $hover-scale;
+            }
     }
-  }
+}

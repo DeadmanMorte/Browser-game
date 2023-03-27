@@ -1,0 +1,17 @@
+@import "config";
+
+%li {
+    list-style: none;
+    display:inline;
+    text-align: $center-align;
+    font-size: larger;
+    font-weight: $bolder-font-weight;
+    margin: 0 100px 0 100px;
+        &:hover{
+            color: red ;
+        };
+}
+
+li{
+    @extend %li;
+}

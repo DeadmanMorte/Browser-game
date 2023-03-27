@@ -1,90 +1,63 @@
 @import "btnConfig";
 @import "config";
+@import "liConfig";
+@import "utilities";
 
-nav li {
-    list-style: none;
-    display:inline;
-    text-align:center;
-    font-size: larger;
-    font-weight: bolder;
-    margin: 0 100px 0 100px
-}
 
-.mainScreen {
-    border-radius: 5%;
-    border: 1px solid white;
-    padding: 1em;
-    min-height: 500px;
-    background-color: #bddfe4;
-}
-.sprite {
-    display:flex;
-    animation:fadeIn 4s;
-}
-.score {
-    display:flex;
-    align-items: right;
-    justify-content: flex-end;
-    font-weight: bolder;
-    padding-right: 40px;
-    font-size: 30px;
-    animation:fadeIn 4s;
-}
-
-.prompts {
-    display:flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    animation:fadeIn 3s;
-    font-size: 15px;
-}
-.responseBtns {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-nav ul {
-    text-align: center;
-}
 body {
-    background-color:#8EDCE6;
-}
+    @include set-bg(#8EDCE6);
 
-.btn1 {
-    display: flex;
-    background-color: rgb(52, 228, 169);
-    padding: 15px 32px;
-    border-radius: 75%;
-    font-size: 15px;
-}
-.btn2 {
-    display: flex;
-    background-color: rgb(52, 228, 169);
-    padding: 15px 32px;
-    border-radius: 75%;
-    font-size: 15px;
-}
-.btn3 {
-    display: flex;
-    background-color: rgb(52, 228, 169);
-    padding: 15px 32px;
-    border-radius: 75%;
-    font-size: 15px;
-}
-.btn4 {
-    display: flex;
-    background-color: rgb(52, 228, 169);
-    padding: 15px 32px;
-    border-radius: 75%;
-    font-size: 15px;
-}
-container {
-    display:flex;
-    justify-content: space-between;
-}
+    nav ul {
+        text-align: $center-align;
+    }
+    .mainScreen {
+        border-radius: 5%;
+        border: 1px solid white;
+        padding: 1em;
+        min-height: 500px;
+        background-color: #bddfe4;    
+            .container {
+            display:$flex-display;
+            justify-content: space-between;
+                .sprite {
+                    display:$flex-display;
+                    animation:fadeIn 4s;
+                        &:hover {
+                            opacity:0;
 
+                            // @include sprite-hover();
+                        }
+                    
+                }
+                .score {
+                    display:$flex-display;
+                    align-items: right;
+                    justify-content: $flex-display;
+                    font-weight: $bolder-font-weight;
+                    padding-right: 40px;
+                    font-size: 30px;
+                    animation:fadeIn 4s;
+                        &:hover{
+                            @include score-up();
+                        }
+                        
+                }
+            }     
+            .prompts {
+                display:$flex-display;
+                text-align: $center-align;
+                @include justifyandalign();
+                animation:fadeIn 3s;
+                font-size: $btn-font-size;
+            }
+            .responseBtns {
+                display: $flex-display;
+                @include justifyandalign();
+            }
+    }
+}
 @keyframes fadeIn {
     0% { opacity:0;}
     100% {opacity:1;}
 }
+

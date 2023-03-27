@@ -1,4 +1,120 @@
-/* screen will start of light and relaxed, refer to color contrast apps,
-will at some point inverse 
-contrast and be mostly dark. to coorespond with thematic shift. */
+.btn-1 {
+  display: flex;
+  background-color: rgb(52, 228, 169);
+  padding: 15px 32px;
+  border-radius: 75%;
+  font-size: 15px;
+}
+.btn-1:hover {
+  background-color: rgb(180, 241, 221);
+  transform: scale(0.8);
+}
 
+.btn-2 {
+  display: flex;
+  background-color: rgb(52, 228, 169);
+  padding: 15px 32px;
+  border-radius: 75%;
+  font-size: 15px;
+}
+.btn-2:hover {
+  background-color: rgb(180, 241, 221);
+  transform: scale(0.8);
+}
+
+.btn-3 {
+  display: flex;
+  background-color: rgb(52, 228, 169);
+  padding: 15px 32px;
+  border-radius: 75%;
+  font-size: 15px;
+}
+.btn-3:hover {
+  background-color: rgb(180, 241, 221);
+  transform: scale(0.8);
+}
+
+.btn-4 {
+  display: flex;
+  background-color: rgb(52, 228, 169);
+  padding: 15px 32px;
+  border-radius: 75%;
+  font-size: 15px;
+}
+.btn-4:hover {
+  background-color: rgb(180, 241, 221);
+  transform: scale(0.8);
+}
+
+li {
+  list-style: none;
+  display: inline;
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+  margin: 0 100px 0 100px;
+}
+li:hover {
+  color: red;
+}
+
+body {
+  background-color: #8EDCE6;
+  color: text-color-contrast(#8EDCE6);
+}
+body nav ul {
+  text-align: center;
+}
+body .mainScreen {
+  border-radius: 5%;
+  border: 1px solid white;
+  padding: 1em;
+  min-height: 500px;
+  background-color: #bddfe4;
+}
+body .mainScreen .container {
+  display: flex;
+  justify-content: space-between;
+}
+body .mainScreen .container .sprite {
+  display: flex;
+  animation: fadeIn 4s;
+}
+body .mainScreen .container .sprite:hover {
+  opacity: 0;
+}
+body .mainScreen .container .score {
+  display: flex;
+  align-items: right;
+  justify-content: flex;
+  font-weight: bolder;
+  padding-right: 40px;
+  font-size: 30px;
+  animation: fadeIn 4s;
+}
+body .mainScreen .container .score:hover {
+  transform: scale(2);
+  color: red;
+}
+body .mainScreen .prompts {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 3s;
+  font-size: 15px;
+}
+body .mainScreen .responseBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */

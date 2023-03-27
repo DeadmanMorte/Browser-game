@@ -49,35 +49,35 @@ function getRandomButton() {
   let num = Math.floor(Math.random() * 4);
   switch(num) {
     case 0:
-        document.getElementsByClassName('btn1')[0].innerHTML = question.answer;
-                document.getElementsByClassName('btn2')[0].innerHTML = question.op1;
-                    document.getElementsByClassName('btn3')[0].innerHTML = question.op2;
-                        document.getElementsByClassName('btn4')[0].innerHTML = question.op3;
+        document.getElementsByClassName('btn-1')[0].innerHTML = question.answer;
+                document.getElementsByClassName('btn-2')[0].innerHTML = question.op1;
+                    document.getElementsByClassName('btn-3')[0].innerHTML = question.op2;
+                        document.getElementsByClassName('btn-4')[0].innerHTML = question.op3;
                             correctBtn = 0;
 
         break;
 
     case 1: 
-        document.getElementsByClassName('btn1')[0].innerHTML = question.op1;  
-            document.getElementsByClassName('btn2')[0].innerHTML = question.answer;
-                document.getElementsByClassName('btn3')[0].innerHTML = question.op2;
-                    document.getElementsByClassName('btn4')[0].innerHTML = question.op3;
+        document.getElementsByClassName('btn-1')[0].innerHTML = question.op1;  
+            document.getElementsByClassName('btn-2')[0].innerHTML = question.answer;
+                document.getElementsByClassName('btn-3')[0].innerHTML = question.op2;
+                    document.getElementsByClassName('btn-4')[0].innerHTML = question.op3;
                         correctBtn = 1;
         break;
   
     case 2:       
-        document.getElementsByClassName('btn1')[0].innerHTML = question.op1;
-            document.getElementsByClassName('btn2')[0].innerHTML = question.op2;
-                document.getElementsByClassName('btn3')[0].innerHTML = question.answer;
-                    document.getElementsByClassName('btn4')[0].innerHTML = question.op3;
+        document.getElementsByClassName('btn-1')[0].innerHTML = question.op1;
+            document.getElementsByClassName('btn-2')[0].innerHTML = question.op2;
+                document.getElementsByClassName('btn-3')[0].innerHTML = question.answer;
+                    document.getElementsByClassName('btn-4')[0].innerHTML = question.op3;
                         correctBtn = 2;
         break;
   
     case 3:
-            document.getElementsByClassName('btn1')[0].innerHTML = question.op1;
-                document.getElementsByClassName('btn3')[0].innerHTML = question.op2;
-                    document.getElementsByClassName('btn2')[0].innerHTML = question.op3;
-                        document.getElementsByClassName('btn4')[0].innerHTML = question.answer;
+            document.getElementsByClassName('btn-1')[0].innerHTML = question.op1;
+                document.getElementsByClassName('btn-3')[0].innerHTML = question.op2;
+                    document.getElementsByClassName('btn-2')[0].innerHTML = question.op3;
+                        document.getElementsByClassName('btn-4')[0].innerHTML = question.answer;
                             correctBtn = 3;
   }
   return correctBtn
@@ -103,10 +103,10 @@ function Forfeit(){
     element = document.getElementsByClassName('surrender');
     element[0].addEventListener('click', function(){
         document.getElementsByTagName('h3')[0].textContent = 'I do not blame you. The burdens of existence are often too much to bear. If this is your true and honest choice I will not patronize you. Are you certain you would like to end it all?';
-            document.getElementsByClassName('btn1')[0].innerHTML = 'Yes';
-                document.getElementsByClassName('btn2')[0].innerHTML = 'No';
-                    document.getElementsByClassName('btn3')[0].innerHTML = "heck no";
-                        document.getElementsByClassName('btn4')[0].innerHTML = "mama aint raise no punk";
+            document.getElementsByClassName('btn-1')[0].innerHTML = 'Yes';
+                document.getElementsByClassName('btn-2')[0].innerHTML = 'No';
+                    document.getElementsByClassName('btn-3')[0].innerHTML = "heck no";
+                        document.getElementsByClassName('btn-4')[0].innerHTML = "mama aint raise no punk";
                                 forfeiture = true;
     })
     return forfeiture
@@ -138,10 +138,10 @@ function toneShift(){
         document.body.style.backgroundColor = 'black';
         document.getElementsByClassName('mainScreen')[0].style.backgroundColor = '#696f70';
             document.body.style.color = 'white';
-                    document.getElementsByClassName('btn1')[0].style.backgroundColor = 'white';
-                        document.getElementsByClassName('btn2')[0].style.backgroundColor = 'white';
-                            document.getElementsByClassName('btn3')[0].style.backgroundColor = "white";
-                                document.getElementsByClassName('btn4')[0].style.backgroundColor = "white";
+                    document.getElementsByClassName('btn-1')[0].style.backgroundColor = 'white';
+                        document.getElementsByClassName('btn-2')[0].style.backgroundColor = 'white';
+                            document.getElementsByClassName('btn-3')[0].style.backgroundColor = "white";
+                                document.getElementsByClassName('btn-4')[0].style.backgroundColor = "white";
                                     document.getElementsByClassName('spritey')[0].remove();                     
     }
  }
