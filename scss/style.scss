@@ -19,29 +19,6 @@ body {
             .container {
             display:$flex-display;
             justify-content: space-between;
-                .sprite {
-                    display:$flex-display;
-                    animation:fadeIn 4s;
-                        &:hover {
-                            opacity:0;
-
-                            // @include sprite-hover();
-                        }
-                    
-                }
-                .score {
-                    display:$flex-display;
-                    align-items: right;
-                    justify-content: $flex-display;
-                    font-weight: $bolder-font-weight;
-                    padding-right: 40px;
-                    font-size: 30px;
-                    animation:fadeIn 4s;
-                        &:hover{
-                            @include score-up();
-                        }
-                        
-                }
             }     
             .prompts {
                 display:$flex-display;
@@ -55,6 +32,27 @@ body {
                 @include justifyandalign();
             }
     }
+}
+.sprite {
+    display:$flex-display;
+    animation:fadeIn 4s;
+        &:hover {
+            @include sprite-hover();
+        }
+    
+}
+.score {
+    display:$flex-display;
+    align-items: right;
+    justify-content: $flex-display;
+    font-weight: $bolder-font-weight;
+    padding-right: 40px;
+    font-size: 30px;
+    animation:fadeIn 4s;
+        &:hover{
+            @include score-up();
+        }
+        
 }
 @keyframes fadeIn {
     0% { opacity:0;}

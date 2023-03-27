@@ -7,6 +7,13 @@
     }
   }
 
+@function fade-time($input){
+  @if ($input <= 4){
+    @warn 'This fade will not present';
+    $input: 4;
+  }
+  @return $input
+}
 @mixin sprite-hover(){
     transition: transform 250ms ease-in-out;
     opacity:0;
